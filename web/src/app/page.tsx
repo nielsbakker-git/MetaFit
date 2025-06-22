@@ -5,11 +5,11 @@ import { Onboarding } from '@/components/Onboarding';
 import { useUser } from '@/hooks/useUser';
 
 export default function Home() {
-  const { user, createUser, updateUser, addWorkout, clearData } = useUser();
+  const { user, createUser, clearData } = useUser();
 
   if (!user) {
     return <Onboarding onOnboard={createUser} />;
   }
 
-  return <App user={user} onUpdateUser={updateUser} onAddWorkout={addWorkout} onClearData={clearData} />;
+  return <App user={user} onClearData={clearData} />;
 }

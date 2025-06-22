@@ -96,7 +96,7 @@ export function Onboarding({ onOnboard }: OnboardingProps) {
             Welcome to MetaFit
           </CardTitle>
           <CardDescription className="text-center">
-            Let's set up your profile to get started.
+            Let&apos;s set up your profile to get started.
           </CardDescription>
         </CardHeader>
         <CardContent>

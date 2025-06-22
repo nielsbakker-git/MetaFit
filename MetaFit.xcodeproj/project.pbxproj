@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		24B025342E082454001BB829 /* Clerk in Frameworks */ = {isa = PBXBuildFile; productRef = 24B025332E082454001BB829 /* Clerk */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		240C06292E075B100011492F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B025342E082454001BB829 /* Clerk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = MetaFit;
 			packageProductDependencies = (
+				24B025332E082454001BB829 /* Clerk */,
 			);
 			productName = MetaFit;
 			productReference = 240C060F2E075B0F0011492F /* MetaFit.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 240C06062E075B0F0011492F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				24B025322E082454001BB829 /* XCRemoteSwiftPackageReference "clerk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 240C06102E075B0F0011492F /* Products */;
 			projectDirPath = "";
@@ -550,6 +559,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24B025322E082454001BB829 /* XCRemoteSwiftPackageReference "clerk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clerk/clerk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.58.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24B025332E082454001BB829 /* Clerk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24B025322E082454001BB829 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = Clerk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 240C06072E075B0F0011492F /* Project object */;
 }

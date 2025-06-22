@@ -57,3 +57,4 @@ struct User: Identifiable, Codable {
         return Double(xpInCurrentLevel) / Double(xpToNextLevel)
     }
 } 
+ 

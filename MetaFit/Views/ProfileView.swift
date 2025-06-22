@@ -2,7 +2,7 @@ import SwiftUI
 import Clerk
 
 struct ProfileView: View {
-    @EnvironmentObject var clerk: Clerk
+    @Environment(Clerk.self) private var clerk
     
     var body: some View {
         NavigationView {
@@ -13,7 +13,7 @@ struct ProfileView: View {
                             .font(.system(size: 80))
                             .foregroundColor(.gray)
                         
-                        Text(user.fullName ?? "No Name")
+                        Text("\(user.firstName ?? "") \(user.lastName ?? "")")
                             .font(.title)
                             .fontWeight(.bold)
                         
@@ -26,7 +26,13 @@ struct ProfileView: View {
                         Spacer()
                         
                         Button("Sign Out", role: .destructive) {
-                            clerk.signOut()
+                            Task {
+                                do {
+                                    try await clerk.signOut()
+                                } catch {
+                                    print("Error signing out: \(error.localizedDescription)")
+                                }
+                            }
                         }
                         .buttonStyle(.bordered)
                         .controlSize(.large)
@@ -44,6 +50,6 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
-            .environmentObject(Clerk.shared)
+            .environment(Clerk.shared)
     }
 } 

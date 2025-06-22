@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    @EnvironmentObject var userDataService: UserDataService
+    // TODO: Re-implement workout persistence without UserDataService
+    // @EnvironmentObject var userDataService: UserDataService
     @EnvironmentObject var exerciseDataService: ExerciseDataService
     @State private var showingNewWorkout = false
     @State private var showingActiveWorkout = false
@@ -38,7 +39,8 @@ struct WorkoutView: View {
 }
 
 struct WorkoutListView: View {
-    @EnvironmentObject var userDataService: UserDataService
+    // TODO: Re-implement workout persistence without UserDataService
+    // @EnvironmentObject var userDataService: UserDataService
     let onQuickStart: (String) -> Void
     
     var body: some View {
@@ -81,7 +83,8 @@ struct WorkoutListView: View {
                         .font(.headline)
                         .fontWeight(.semibold)
                     
-                    let todaysWorkouts = userDataService.getWorkoutsForDate(Date())
+                    // TODO: Fetch today's workouts from a new persistence layer
+                    let todaysWorkouts: [Workout] = [] // userDataService.getWorkoutsForDate(Date())
                     
                     if todaysWorkouts.isEmpty {
                         VStack(spacing: 10) {
@@ -434,7 +437,8 @@ struct ExercisePickerRowView: View {
 
 struct ActiveWorkoutView: View {
     @Binding var workout: Workout?
-    @EnvironmentObject var userDataService: UserDataService
+    // TODO: Re-implement workout persistence without UserDataService
+    // @EnvironmentObject var userDataService: UserDataService
     @EnvironmentObject var exerciseDataService: ExerciseDataService
     @State private var currentExerciseIndex = 0
     @State private var showingExerciseDetail = false
@@ -544,7 +548,8 @@ struct ActiveWorkoutView: View {
         finalWorkout.recalculateTotals()
         
         // Add to user data
-        userDataService.addWorkout(finalWorkout)
+        // TODO: Re-implement workout persistence without UserDataService
+        // userDataService.addWorkout(finalWorkout)
         
         // Reset
         self.workout = nil
@@ -600,6 +605,6 @@ struct ExerciseDetailCard: View {
 
 #Preview {
     WorkoutView()
-        .environmentObject(UserDataService())
+        //.environmentObject(UserDataService()) // This service has been removed
         .environmentObject(ExerciseDataService())
 } 

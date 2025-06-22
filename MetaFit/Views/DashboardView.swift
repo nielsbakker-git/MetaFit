@@ -2,7 +2,7 @@ import SwiftUI
 import Clerk
 
 struct DashboardView: View {
-    @EnvironmentObject var clerk: Clerk
+    @Environment(Clerk.self) private var clerk
     
     var body: some View {
         NavigationView {
@@ -64,6 +64,6 @@ struct StatCard: View {
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardView()
-            .environmentObject(Clerk.shared)
+            .environment(Clerk.shared)
     }
 } 

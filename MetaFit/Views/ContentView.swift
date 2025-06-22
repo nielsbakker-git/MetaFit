@@ -2,18 +2,20 @@ import SwiftUI
 import Clerk
 
 struct ContentView: View {
-    @StateObject var clerk = Clerk.shared
-    
+    @Environment(Clerk.self) private var clerk
+
     var body: some View {
         VStack {
-            if clerk.user != nil {
+            if let user = clerk.user {
                 DashboardView()
+                Button("Sign Out") {
+                    Task { try? await clerk.signOut() }
+                }
+                .buttonStyle(.bordered)
+                .padding()
             } else {
-                SignInView()
+                SignUpOrSignInView()
             }
-        }
-        .onAppear {
-            clerk.load()
         }
     }
 }

@@ -1,0 +1,31 @@
+# Xcode
+#
+# gitignore contributors: remember to keep this file platform-agnostic
+# gitignore test case contributors: remember to name your test case files that should be ignored ".swift-test"
+
+## User-specific
+.DS_Store
+*.xcodeproj/project.xcworkspace/xcshareddata/xcschemes/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcscmblueprint
+*.xcschememanagement.plist
+
+## Build generated
+build/
+DerivedData/
+
+## Various
+*.moved-aside
+*.ipa
+*.app
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+#
+# Add this line if you want to avoid checking in resolved dependency versions.
+# Package.resolved
+.build/
+Packages/ 

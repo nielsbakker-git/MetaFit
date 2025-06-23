@@ -12,7 +12,7 @@ MetaFit is a gamified fitness tracking iOS app that combines workout tracking wi
 - **Streak Tracking**: Track consecutive workout days
 
 ### 💪 Workout Tracking
-- **Exercise Library**: Comprehensive database of exercises from [fitnessprogramer.com](https://fitnessprogramer.com/exercises/)
+- **Exercise Library**: Comprehensive database of exercises 
 - **Multiple Exercise Types**: Support for strength, cardio, flexibility, and more
 - **Set & Rep Tracking**: Log sets, reps, weights, and rest times
 - **Endurance Exercises**: Track duration-based exercises like running or cycling
@@ -97,7 +97,7 @@ The app uses `UserDefaults` for data persistence:
 
 ## Exercise Database
 
-The app includes a comprehensive exercise database based on [fitnessprogramer.com](https://fitnessprogramer.com/exercises/) with:
+The app includes a comprehensive exercise database with:
 - **Exercise Categories**: Strength, Cardio, Flexibility, Balance, Calisthenics, Yoga, Pilates, Plyometrics, Stretching
 - **Equipment Types**: No Equipment, Barbell, Dumbbells, Bench, Cable, Machine, Kettlebell, Resistance Band, Exercise Ball, Foam Roller, TRX Suspension, Full Gym
 - **Muscle Groups**: Neck, Trapezius, Shoulders, Chest, Back, Erector Spinae, Biceps, Triceps, Forearm, Abs, Core, Legs, Calves, Hips, Full Body
@@ -140,10 +140,9 @@ This is a personal project, but suggestions and feedback are welcome! The app is
 
 ## License
 
-This project is for educational purposes. The exercise database is based on publicly available information from fitnessprogramer.com.
+This project is for educational purposes.
 
 ## Acknowledgments
 
-- Exercise database inspired by [fitnessprogramer.com](https://fitnessprogramer.com/exercises/)
 - Apple Human Interface Guidelines for design principles
 - SwiftUI framework for modern iOS development 
